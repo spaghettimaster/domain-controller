@@ -71,7 +71,7 @@ def main():
     domain = ""
     admin_password = ""
 
-    join = ""
+    join = "ask interactively"
     join_nameserver = ""
 
     for opt, val in opts:
@@ -91,7 +91,7 @@ def main():
 
     while 1:
 
-        if not join:
+        if join == "ask interactively":
             d = Dialog('Turnkey Linux - First boot configuration')
             join = d.yesno(
                 "Join existing AD?",
